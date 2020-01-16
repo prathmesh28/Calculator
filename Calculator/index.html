@@ -7,12 +7,12 @@
 	<style type="text/css">
 		body{
 
-			background-color: grey;
 	}
 		.calc{
-			background-color: white;
+			background-color: grey;
 			width: 300px;
 			height: auto;
+			padding: 20px;
 
 		}
 		.button{
@@ -32,18 +32,17 @@
 			width:40px;
 			height: 40px;
 			text-align: center;
+			padding: 10px;
 		}
 	</style>
 </head>
 <body>
 	<center>
 	<div class="calc">
-		
 		<div>
-			<table border="1"  >
-				<tr >
-					<td colspan="4" style="height: 50px" >
-						
+			<table   >
+				<tr bgcolor="white">
+					<td colspan="4" style="height: 50px color: black" id="result">
 					</td>
 				</tr>
 			<tr> 
@@ -53,34 +52,50 @@
             <td><button class="button">/</button></td> 
             </tr>
             <tr> 
-            <td><button class="button ">7</button></td> 
-            <td><button class="button">8</button></td> 
-            <td><button class="button">9</button></td> 
-            <td><button class="button">*</button></td> 
+            <td><button class="button" onclick="dis('7')">7</button></td> 
+            <td><button class="button" onclick="dis('8')">8</button></td> 
+            <td><button class="button" onclick="dis('9')">9</button></td> 
+            <td><button class="button" onclick="dis('*')">*</button></td> 
             </tr>
             <tr> 
-            <td><button class="button ">4</button></td> 
-            <td><button class="button">5</button></td> 
-            <td><button class="button">6</button></td> 
-            <td><button class="button">-</button></td> 
+            <td><button class="button" onclick="dis('4')">4</button></td> 
+            <td><button class="button" onclick="dis('5')">5</button></td> 
+            <td><button class="button" onclick="dis('6')">6</button></td> 
+            <td><button class="button" onclick="dis('-')">-</button></td> 
             </tr>
             <tr> 
-            <td><button class="button ">1</button></td> 
-            <td><button class="button">2</button></td> 
-            <td><button class="button">3</button></td> 
-            <td><button class="button">+</button></td> 
+            <td><button class="button" onclick="dis('1')">1</button></td> 
+            <td><button class="button" onclick="dis('2')">2</button></td> 
+            <td><button class="button" onclick="dis('3')">3</button></td> 
+            <td><button class="button" onclick="dis('+')">+</button></td> 
             </tr>
             <tr> 
-            <td><button class="button ">.</button></td> 
-            <td><button class="button">0</button></td> 
-            <td><button class="button">^</button></td> 
-            <td><button class="button">=</button></td> 
+            <td><button class="button" onclick="dis('.')">.</button></td> 
+            <td><button class="button" onclick="dis('0')">0</button></td> 
+            <td><button class="button" onclick="dis('^')">^</button></td> 
+            <td><button class="button" onclick="solve()">=</button></td> 
             </tr>
      		</table>
  		</div>
 	</div>
 </center>
 <script type="text/javascript">	
+         function dis(val) 
+         { 
+             document.getElementById("result").value+=val 
+         } 
+            
+         function solve() 
+         { 
+             let x = document.getElementById("result").value 
+             let y = eval(x) 
+             document.getElementById("result").value = y 
+         } 
+         function clr() 
+         { 
+             document.getElementById("result").value = "" 
+         }
+
 	</script>
 </body>
 </html>
