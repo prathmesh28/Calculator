@@ -55,7 +55,7 @@
 				</tr>
 			<tr> 
             <td><button class="button" value="c" onclick="clr()">AC</button></td> 
-            <td><button class="button">DEL</button></td> 
+            <td><button class="button" onclick="back()">DEL</button></td> 
             <td><button class="button" value="%" onclick="dis('%')">%</button></td> 
             <td><button class="button" value="/" onclick="dis('/')">/</button></td> 
             </tr>
@@ -101,6 +101,10 @@
 		function clr() 
 		{ 
 			document.getElementById("result").value = "" 
+		}
+		function back() {
+			var value = document.getElementById("result").value;
+			document.getElementById("result").value = value.substr(0, value.length - 1);
 		}
 	</script>
 </body>
