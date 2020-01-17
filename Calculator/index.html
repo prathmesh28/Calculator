@@ -9,7 +9,7 @@
 
 	}
 		.calc{
-			background-color: grey;
+			background-color: #1B1B1B;
 			width: 300px;
 			height: auto;
 			padding: 20px;
@@ -34,6 +34,13 @@
 			text-align: center;
 			padding: 10px;
 		}
+		#result{
+			background-color: white;
+			height: 50px; 
+			text-align:right;
+			width: 280px;
+
+		}
 	</style>
 </head>
 <body>
@@ -41,16 +48,16 @@
 	<div class="calc">
 		<div>
 			<table   >
-				<tr bgcolor="white">
-					<td colspan="4" type="text" style="height: 50px color: black">
-						<input type="text" id="result"/>
+				<tr bgcolor="grey">
+					<td colspan="4" type="text" >
+						<input type="text" id="result" />
 					</td>
 				</tr>
 			<tr> 
             <td><button class="button" value="c" onclick="clr()">AC</button></td> 
             <td><button class="button">DEL</button></td> 
-            <td><button class="button" value="%" onclick="dis('7')">%</button></td> 
-            <td><button class="button" value="/" onclick="dis('7')">/</button></td> 
+            <td><button class="button" value="%" onclick="dis('%')">%</button></td> 
+            <td><button class="button" value="/" onclick="dis('/')">/</button></td> 
             </tr>
             <tr> 
             <td><button class="button" value="7" onclick="dis('7')">7</button></td> 
@@ -81,20 +88,16 @@
 	</div>
 </center>
 <script type="text/javascript">	
-//function that display value 
 		function dis(val) 
 		{ 
 			document.getElementById("result").value+=val 
 		} 
-		//function that evaluates the digit and return result 
 		function solve() 
 		{ 
 			let x = document.getElementById("result").value 
 			let y = eval(x) 
 			document.getElementById("result").value = y 
 		} 
-		
-		//function that clear the display 
 		function clr() 
 		{ 
 			document.getElementById("result").value = "" 
