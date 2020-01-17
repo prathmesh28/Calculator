@@ -42,38 +42,38 @@
 		<div>
 			<table   >
 				<tr bgcolor="white">
-					<td colspan="4" style="height: 50px color: black" id="result">
+					<td colspan="4" type="text" style="height: 50px color: black" class="screen" value="" disabled>
 					</td>
 				</tr>
 			<tr> 
-            <td><button class="button ">AC</button></td> 
+            <td><button class="button" value="c" onclick="clr()">AC</button></td> 
             <td><button class="button">DEL</button></td> 
-            <td><button class="button">%</button></td> 
-            <td><button class="button">/</button></td> 
+            <td><button class="button" value="%" onclick="dis('7')">%</button></td> 
+            <td><button class="button" value="/" onclick="dis('7')">/</button></td> 
             </tr>
             <tr> 
-            <td><button class="button" onclick="dis('7')">7</button></td> 
-            <td><button class="button" onclick="dis('8')">8</button></td> 
-            <td><button class="button" onclick="dis('9')">9</button></td> 
-            <td><button class="button" onclick="dis('*')">*</button></td> 
+            <td><button class="button" value="7" onclick="dis('7')">7</button></td> 
+            <td><button class="button" value="8" onclick="dis('8')">8</button></td> 
+            <td><button class="button" value="9" onclick="dis('9')">9</button></td> 
+            <td><button class="button" value="*" onclick="dis('*')">*</button></td> 
             </tr>
             <tr> 
-            <td><button class="button" onclick="dis('4')">4</button></td> 
-            <td><button class="button" onclick="dis('5')">5</button></td> 
-            <td><button class="button" onclick="dis('6')">6</button></td> 
-            <td><button class="button" onclick="dis('-')">-</button></td> 
+            <td><button class="button" value="4" onclick="dis('4')">4</button></td> 
+            <td><button class="button" value="5" onclick="dis('5')">5</button></td> 
+            <td><button class="button" value="6" onclick="dis('6')">6</button></td> 
+            <td><button class="button" value="-" onclick="dis('-')">-</button></td> 
             </tr>
             <tr> 
-            <td><button class="button" onclick="dis('1')">1</button></td> 
-            <td><button class="button" onclick="dis('2')">2</button></td> 
-            <td><button class="button" onclick="dis('3')">3</button></td> 
-            <td><button class="button" onclick="dis('+')">+</button></td> 
+            <td><button class="button" value="1" onclick="dis('1')">1</button></td> 
+            <td><button class="button" value="2" onclick="dis('2')">2</button></td> 
+            <td><button class="button" value="3" onclick="dis('3')">3</button></td> 
+            <td><button class="button" value="+" onclick="dis('+')">+</button></td> 
             </tr>
             <tr> 
-            <td><button class="button" onclick="dis('.')">.</button></td> 
-            <td><button class="button" onclick="dis('0')">0</button></td> 
-            <td><button class="button" onclick="dis('^')">^</button></td> 
-            <td><button class="button" onclick="solve()">=</button></td> 
+            <td><button class="button" value="." onclick="dis('.')">.</button></td> 
+            <td><button class="button" value="0" onclick="dis('0')">0</button></td> 
+            <td><button class="button" value="^" onclick="dis('^')">^</button></td> 
+            <td><button class="button" value="=" onclick="solve()">=</button></td> 
             </tr>
      		</table>
  		</div>
@@ -82,18 +82,22 @@
 <script type="text/javascript">	
          function dis(val) 
          { 
-             document.getElementById("result").value+=val 
+         	console.log(val);
+             document.getElementById("result").value+=val;
+         	console.log(val); 
          } 
             
          function solve() 
          { 
-             let x = document.getElementById("result").value 
-             let y = eval(x) 
-             document.getElementById("result").value = y 
+             let x = document.getElementById("result").value; 
+             console.log(x); 
+             let y = eval(x);
+             //console.log(y); 
+             document.getElementById("result").value = y;
          } 
          function clr() 
          { 
-             document.getElementById("result").value = "" 
+             document.getElementById("result").value = "";
          }
 
 	</script>
