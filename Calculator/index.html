@@ -36,9 +36,10 @@
 		}
 		#result{
 			background-color: white;
-			height: 50px; 
+			height: 60px; 
 			text-align:right;
 			width: 280px;
+			font-size: 40px;
 
 		}
 	</style>
@@ -49,14 +50,14 @@
 		<div>
 			<table   >
 				<tr bgcolor="grey">
-					<td colspan="4" type="text" >
-						<input type="text" id="result" />
+					<td colspan="4">
+						<input type="text" id="result"/>
 					</td>
 				</tr>
 			<tr> 
             <td><button class="button" value="c" onclick="clr()">AC</button></td> 
             <td><button class="button" onclick="back()">DEL</button></td> 
-            <td><button class="button" value="%" onclick="dis('%')">%</button></td> 
+            <td><button class="button" value="%" onclick="p()">%</button></td> 
             <td><button class="button" value="/" onclick="dis('/')">/</button></td> 
             </tr>
             <tr> 
@@ -80,7 +81,7 @@
             <tr> 
             <td><button class="button" value="." onclick="dis('.')">.</button></td> 
             <td><button class="button" value="0" onclick="dis('0')">0</button></td> 
-            <td><button class="button" value="^" onclick="dis('^')">^</button></td> 
+            <td><button class="button" value="^" onclick="sqrt('^')">^</button></td> 
             <td><button class="button" value="=" onclick="solve()">=</button></td> 
             </tr>
      		</table>
@@ -105,6 +106,16 @@
 		function back() {
 			var value = document.getElementById("result").value;
 			document.getElementById("result").value = value.substr(0, value.length - 1);
+		}
+		function sqrt(val){
+
+			document.getElementById("result").value^=val;
+
+		}
+		function p(){
+			x=document.getElementById("result").value;
+			x=x/100;
+			document.getElementById("result").value = x;
 		}
 	</script>
 </body>
