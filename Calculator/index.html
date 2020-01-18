@@ -13,24 +13,17 @@
 			width: 300px;
 			height: auto;
 			padding: 20px;
-
+			border-radius: 10px;
 		}
 		.button{
-			
 			border-radius: 50%;
 			background-color: black;
 			color: white;
 			height: 50px;
 			width: 50px;
 			text-align: center;
-			box-shadow: none;
-		}
-		.display{
-			height: 60px;
 		}
 		td{
-			width:40px;
-			height: 40px;
 			text-align: center;
 			padding: 10px;
 		}
@@ -40,21 +33,23 @@
 			text-align:right;
 			width: 280px;
 			font-size: 40px;
-
 		}
+		
+		tr.test td {padding-top: 25px;}
+		
 	</style>
 </head>
 <body>
 	<center>
-	<div class="calc">
-		<div>
-			<table   >
+	<div class="container">
+		<div class="calc">
+			<table >
 				<tr bgcolor="grey">
-					<td colspan="4">
+					<td colspan="4"  >
 						<input type="text" id="result"/>
 					</td>
 				</tr>
-			<tr> 
+			<tr  class="test"> 
             <td><button class="button" value="c" onclick="clr()">AC</button></td> 
             <td><button class="button" onclick="back()">DEL</button></td> 
             <td><button class="button" value="%" onclick="p()">%</button></td> 
