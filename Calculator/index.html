@@ -81,7 +81,7 @@
             <tr> 
             <td><button class="button" value="." onclick="dis('.')">.</button></td> 
             <td><button class="button" value="0" onclick="dis('0')">0</button></td> 
-            <td><button class="button" value="^" onclick="sqrt('^')">^</button></td> 
+            <td><button class="button" value="00" onclick="dis('00')">00</button></td> 
             <td><button class="button" value="=" onclick="solve()">=</button></td> 
             </tr>
      		</table>
@@ -106,11 +106,6 @@
 		function back() {
 			var value = document.getElementById("result").value;
 			document.getElementById("result").value = value.substr(0, value.length - 1);
-		}
-		function sqrt(val){
-
-			document.getElementById("result").value^=val;
-
 		}
 		function p(){
 			x=document.getElementById("result").value;
