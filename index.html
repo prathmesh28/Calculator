@@ -33,15 +33,25 @@
 			background-color: white;
 			text-align:right;
 			font-size: 7vw;
-			height: 100%;
+			height: 70%;
 			width: 100%;
 			display: inline-block;
+			border: 0;
 		}
 		
 		.display{
 			background: grey;
 			align-items: center;
 			display: flex;
+			flex-flow: column;
+		}
+		#ans{
+			background-color: white;
+			text-align:right;
+			font-size: 7vw;
+			height: 30%;
+			width: 100%;
+			border: 0;
 		}
 		.box{
 			display: flex;
@@ -61,6 +71,7 @@
 	<div class="calc">
 			<div class="display" bgcolor="grey">
 				<input type="text" id="result" readonly/>
+				<input type="text" id="ans" value="=" readonly/>
 			</div>
 		   <div class="test"> 
             <div class="box"><button class="button" value="c" onclick="clr()">AC</button></div> 
@@ -98,12 +109,13 @@
 		function solve() 
 		{ 
 			let x = document.getElementById("result").value 
-			let y = eval(x) 
-			document.getElementById("result").value = y 
+			let y = "="+ eval(x) 
+			document.getElementById("ans").value = y 
 		} 
 		function clr() 
 		{ 
 			document.getElementById("result").value = "" 
+			document.getElementById("ans").value = "" 
 		}
 		function back() {
 			var value = document.getElementById("result").value;
