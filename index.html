@@ -39,47 +39,37 @@
 	</style>
 </head>
 <body>
-	<center>
-		<div class="calc">
-			<table >
-				<tr bgcolor="grey">
-					<td colspan="4"  >
-						<input type="text" id="result" />
-					</td>
-				</tr>
-			<tr  class="test"> 
-            <td><button class="button" value="c" onclick="clr()">AC</button></td> 
-            <td><button class="button" onclick="back()">DEL</button></td> 
-            <td><button class="button" value="%" onclick="p()">%</button></td> 
-            <td><button class="button" value="/" onclick="dis('/')">/</button></td> 
-            </tr>
-            <tr> 
-            <td><button class="button" value="7" onclick="dis('7')">7</button></td> 
-            <td><button class="button" value="8" onclick="dis('8')">8</button></td> 
-            <td><button class="button" value="9" onclick="dis('9')">9</button></td> 
-            <td><button class="button" value="*" onclick="dis('*')">*</button></td> 
-            </tr>
-            <tr> 
-            <td><button class="button" value="4" onclick="dis('4')">4</button></td> 
-            <td><button class="button" value="5" onclick="dis('5')">5</button></td> 
-            <td><button class="button" value="6" onclick="dis('6')">6</button></td> 
-            <td><button class="button" value="-" onclick="dis('-')">-</button></td> 
-            </tr>
-            <tr> 
-            <td><button class="button" value="1" onclick="dis('1')">1</button></td> 
-            <td><button class="button" value="2" onclick="dis('2')">2</button></td> 
-            <td><button class="button" value="3" onclick="dis('3')">3</button></td> 
-            <td><button class="button" value="+" onclick="dis('+')">+</button></td> 
-            </tr>
-            <tr> 
-            <td><button class="button" value="." onclick="dis('.')"> . </button></td> 
-            <td><button class="button" value="0" onclick="dis('0')">0</button></td> 
-            <td><button class="button" value="00" onclick="dis('00')">00</button></td> 
-            <td><button class="button" value="=" onclick="solve()">=</button></td> 
-            </tr>
-     		</table>
- 		</div>
+	<div class="calc">
+			<div class="display" bgcolor="grey">
+				<input type="text" id="result"/>
+			</div>
+		   <div class="test"> 
+            <div class="box"><button class="button" value="c" onclick="clr()">AC</button></div> 
+            <div class="box"><button class="button" onclick="back()">DEL</button></div> 
+            <div class="box"><button class="button" value="%" onclick="p()">%</button></div> 
+            <div class="box"><button class="button" value="/" onclick="dis('/')">/</button></div> 
 
+            <div class="box"><button class="button" value="7" onclick="dis('7')">7</button></div> 
+            <div class="box"><button class="button" value="8" onclick="dis('8')">8</button></div> 
+            <div class="box"><button class="button" value="9" onclick="dis('9')">9</button></div> 
+            <div class="box"><button class="button" value="*" onclick="dis('*')">*</button></div> 
+            
+            <div class="box"><button class="button" value="4" onclick="dis('4')">4</button></div> 
+            <div class="box"><button class="button" value="5" onclick="dis('5')">5</button></div> 
+            <div class="box"><button class="button" value="6" onclick="dis('6')">6</button></div> 
+            <div class="box"><button class="button" value="-" onclick="dis('-')">-</button></div> 
+             
+            <div class="box"><button class="button" value="1" onclick="dis('1')">1</button></div> 
+            <div class="box"><button class="button" value="2" onclick="dis('2')">2</button></div> 
+            <div class="box"><button class="button" value="3" onclick="dis('3')">3</button></div> 
+            <div class="box"><button class="button" value="+" onclick="dis('+')">+</button></div> 
+             
+            <div class="box"><button class="button" value="." onclick="dis('.')"> . </button></div> 
+            <div class="box"><button class="button" value="0" onclick="dis('0')">0</button></div> 
+            <div class="box"><button class="button" value="00" onclick="dis('00')">00</button></div> 
+            <div class="box"><button class="button" value="=" onclick="solve()">=</button></div> 
+           </div>
+ 	</div>
 </center>
 <script type="text/javascript">	
 		function dis(val) 
