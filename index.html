@@ -16,7 +16,7 @@
 			grid-template-rows: 1fr 2fr;
 			height: 100%;	
 		}
-		.button{
+		#button{
 			font-size: 3.7vmax;
 			width: 100%;
 			height: 100%;
@@ -38,15 +38,17 @@
 			display: inline-block;
 			border: 0;
 			overflow-wrap: break-word;
-  		word-wrap: break-word;
-  hyphens: auto;
+  			word-wrap: break-word;
+  			hyphens: auto;
 		}
 		
 		.display{
-			background: grey;
+			margin: 10px;
 			align-items: center;
 			display: flex;
 			flex-flow: column;
+
+			border-bottom: 0.1vw dotted;
 		}
 		#ans{
 			background-color: white;
@@ -65,42 +67,41 @@
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 			grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-
 		}
 		
 	</style>
 </head>
 <body>
 	<div class="calc">
-			<div class="display" bgcolor="grey">
-				<input type="text" id="result" readonly/>
-				<input type="text" id="ans" value="=" readonly/>
+			<div class="display" bgcolor="grey" ondblclick="bg()">
+				<input type="text" id="result" placeholder="0" readonly/>
+				<input type="text" id="ans" value="=0" readonly/>
 			</div>
-		   <div class="test"> 
-            <div class="box"><button class="button" value="c" onclick="clr()">AC</button></div> 
-            <div class="box"><button class="button" onclick="back()">⌫</button></div> 
-            <div class="box"><button class="button" value="%" onclick="p()">%</button></div> 
-            <div class="box"><button class="button" value="/" onclick="dis('/')">/</button></div> 
+		   <div class="test" id="test"> 
+            <div class="box"><button id="button" value="c" onclick="clr()">AC</button></div> 
+            <div class="box"><button id="button" onclick="back()">⌫</button></div> 
+            <div class="box"><button id="button" value="%" onclick="p()">%</button></div> 
+            <div class="box"><button id="button" value="/" onclick="dis('/')">/</button></div> 
 
-            <div class="box"><button class="button" value="7" onclick="dis('7')">7</button></div> 
-            <div class="box"><button class="button" value="8" onclick="dis('8')">8</button></div> 
-            <div class="box"><button class="button" value="9" onclick="dis('9')">9</button></div> 
-            <div class="box"><button class="button" value="*" onclick="dis('*')">*</button></div> 
+            <div class="box"><button id="button" value="7" onclick="dis('7')">7</button></div> 
+            <div class="box"><button id="button" value="8" onclick="dis('8')">8</button></div> 
+            <div class="box"><button id="button" value="9" onclick="dis('9')">9</button></div> 
+            <div class="box"><button id="button" value="*" onclick="dis('*')">*</button></div> 
             
-            <div class="box"><button class="button" value="4" onclick="dis('4')">4</button></div> 
-            <div class="box"><button class="button" value="5" onclick="dis('5')">5</button></div> 
-            <div class="box"><button class="button" value="6" onclick="dis('6')">6</button></div> 
-            <div class="box"><button class="button" value="-" onclick="dis('-')">-</button></div> 
+            <div class="box"><button id="button" value="4" onclick="dis('4')">4</button></div> 
+            <div class="box"><button id="button" value="5" onclick="dis('5')">5</button></div> 
+            <div class="box"><button id="button" value="6" onclick="dis('6')">6</button></div> 
+            <div class="box"><button id="button" value="-" onclick="dis('-')">-</button></div> 
              
-            <div class="box"><button class="button" value="1" onclick="dis('1')">1</button></div> 
-            <div class="box"><button class="button" value="2" onclick="dis('2')">2</button></div> 
-            <div class="box"><button class="button" value="3" onclick="dis('3')">3</button></div> 
-            <div class="box"><button class="button" value="+" onclick="dis('+')">+</button></div> 
+            <div class="box"><button id="button" value="1" onclick="dis('1')">1</button></div> 
+            <div class="box"><button id="button" value="2" onclick="dis('2')">2</button></div> 
+            <div class="box"><button id="button" value="3" onclick="dis('3')">3</button></div> 
+            <div class="box"><button id="button" value="+" onclick="dis('+')">+</button></div> 
              
-            <div class="box"><button class="button" value="." onclick="dis('.')"> . </button></div> 
-            <div class="box"><button class="button" value="0" onclick="dis('0')">0</button></div> 
-            <div class="box"><button class="button" value="00" onclick="dis('00')">00</button></div> 
-            <div class="box"><button class="button" value="=" onclick="solve()">=</button></div> 
+            <div class="box"><button id="button" value="." onclick="dis('.')"> . </button></div> 
+            <div class="box"><button id="button" value="0" onclick="dis('0')">0</button></div> 
+            <div class="box"><button id="button" value="00" onclick="dis('00')">00</button></div> 
+            <div class="box"><button id="button" value="=" onclick="solve()">=</button></div> 
            </div>
  	</div>
 </center>
@@ -119,7 +120,7 @@
 		function clr() 
 		{ 
 			document.getElementById("result").value = "" 
-			document.getElementById("ans").value = "" 
+			document.getElementById("ans").value = "=0" 
 		}
 		function back() {
 			var value = document.getElementById("result").value;
@@ -129,6 +130,10 @@
 			x=document.getElementById("result").value;
 			x=x/100;
 			document.getElementById("ans").value = "="+x;
+		}
+		function bg() {
+			
+
 		}
 	</script>
 </body>
