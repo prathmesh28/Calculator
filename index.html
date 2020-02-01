@@ -12,6 +12,16 @@
 			padding-top: 15px;
 			padding-bottom: 15px;
 			border-radius: 10px;*/
+			position: absolute;
+			top:0;
+			left:0;
+			right: 0;
+			display: grid;
+			grid-gap: 20px;
+			grid-template-rows: 1fr 2fr;
+			height: 100%;
+			/*display: flex;
+			flex-direction: row no-wrap;*/
 		}
 		.button{/*
 			border-radius: 50%;*/
@@ -34,11 +44,27 @@
 			height: 100%;
 			width: 100%;
 		}
+		
 		.display{
-			
+			background: grey;
+			align-items: center;
+
+			display: flex;
+
+		}
+		.box{
+			display: flex;
+			justify-content: center;
+
 		}
 		/*
 		tr.test td {padding-top: 25px;}*/
+		.test{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+		}
 		
 	</style>
 </head>
