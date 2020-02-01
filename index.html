@@ -7,12 +7,6 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<style type="text/css">
 		.calc{
-			/*background-color: #1B1B1B;
-			width: 340px;
-			height: auto;
-			padding-top: 15px;
-			padding-bottom: 15px;
-			border-radius: 10px;*/
 			position: absolute;
 			top:0;
 			left:0;
@@ -20,86 +14,40 @@
 			display: grid;
 			grid-gap: 20px;
 			grid-template-rows: 1fr 2fr;
-			height: 100%;
-			/*display: flex;
-			flex-direction: row no-wrap;*/
+			height: 100%;	
 		}
-		.button{/*
-			border-radius: 50%;
-			height: 50px;
-			width: 50px;*/
+		.button{
 			font-size: 3.7vmax;
 			width: 100%;
 			height: 100%;
 			background: transparent;
 			border: transparent;
 			font-weight: bolder;
-			text-align: center;/*
-			background-image: linear-gradient(to bottom right,#F9F9F3, #808088, #1B1B1B);*/		
-		
-				text-decoration: none;
-  /*
-  font-size: 16px;
-  letter-spacing: .08em;*/
-  				position: relative;/*
-  -webkit-transition: background-color .6s ease;
-  transition: background-color .6s ease;*/
-  overflow: hidden;
-}
-.button:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 50%;
-  left: 50%;
-  -webkit-transform-style: flat;
-          transform-style: flat;
-          /*
-  -webkit-transform: translate3d(-50%, -50%, 0);*/
-          transform: translate3d(-50%, -50%, 0);
-  background: rgba(255, 255, 255, 0.1);
-  /*
-  -webkit-transition: width .3s ease, height .3s ease;*/
-  transition: width .3s , height .3s ;
-}
-.button:hover {
-  background: rgba(0, 0, 0, 0.1);
-}
-.button:active:after {
-  width: 100%;
-  height: 100%;
-}
+			text-align: center;	
+		}
 
-
-		
 		button:focus {outline:0;}
-		/*td{
-			text-align: center;
-			padding: 10px;
-		}*/
+		input:focus {outline:0;}
+		
 		#result{
 			background-color: white;
 			text-align:right;
 			font-size: 7vw;
 			height: 100%;
 			width: 100%;
+			display: inline-block;
 		}
 		
 		.display{
 			background: grey;
 			align-items: center;
-
 			display: flex;
-
 		}
 		.box{
 			display: flex;
 			justify-content: center;
 
 		}
-		/*
-		tr.test td {padding-top: 25px;}*/
 		.test{
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -112,7 +60,7 @@
 <body>
 	<div class="calc">
 			<div class="display" bgcolor="grey">
-				<input type="text" id="result"/>
+				<input type="text" id="result" readonly/>
 			</div>
 		   <div class="test"> 
             <div class="box"><button class="button" value="c" onclick="clr()">AC</button></div> 
