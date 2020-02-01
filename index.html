@@ -32,11 +32,14 @@
 		#result{
 			background-color: white;
 			text-align:right;
-			font-size: 7vw;
+			font-size: 8vmax;
 			height: 70%;
 			width: 100%;
 			display: inline-block;
 			border: 0;
+			overflow-wrap: break-word;
+  		word-wrap: break-word;
+  hyphens: auto;
 		}
 		
 		.display{
@@ -111,6 +114,7 @@
 			let x = document.getElementById("result").value 
 			let y = "="+ eval(x) 
 			document.getElementById("ans").value = y 
+			document.getElementById("result").value =  eval(x) 
 		} 
 		function clr() 
 		{ 
@@ -124,7 +128,7 @@
 		function p(){
 			x=document.getElementById("result").value;
 			x=x/100;
-			document.getElementById("result").value = x;
+			document.getElementById("ans").value = "="+x;
 		}
 	</script>
 </body>
