@@ -1,3 +1,3 @@
 # Simple Calculator
- thirsty-murdock-1b4cf6.netlify.com
- Responsive - priceless-beaver-631617.netlify.com
+ https://thirsty-murdock-1b4cf6.netlify.com
+ Responsive - https://priceless-beaver-631617.netlify.com/
